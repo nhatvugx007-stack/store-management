@@ -1,0 +1,190 @@
+/* =========================================
+   🛒 E-Commerce Modern Style (Tailwind + Outfit)
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+
+/* Import Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Font: Outfit */
+
+/* Reset cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: #ffffff;
+  color: #1f2937; /* text-gray-800 */
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: #10B981; /* green-500 */
+}
+
+/* Lists */
+ul {
+  list-style: none;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+  font-family: inherit;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+/* =========================================
+   🔹 Slick Carousel
+   ========================================= */
+.slick-slide {
+  padding: 0 8px;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: background 0.25s ease;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.slick-dots li button:before {
+  font-size: 10px;
+  color: #999;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #10B981;
+}
+
+/* =========================================
+   🏙️ Hero Banner
+   ========================================= */
+.hero-banner {
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-banner h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.hero-banner p {
+  font-size: 1.125rem;
+  opacity: 0.9;
+}
+
+/* =========================================
+   📦 Product Cards
+   ========================================= */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img {
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.08);
+}
+
+.product-card .overlay {
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.product-card:hover .overlay {
+  opacity: 1;
+}
+
+/* =========================================
+   ⚙️ Footer
+   ========================================= */
+footer {
+  background-color: #f9fafb;
+  color: #374151;
+  padding: 40px 0;
+  font-size: 0.95rem;
+}
+
+footer a:hover {
+  color: #10B981;
+}
+
+/* =========================================
+   📱 Responsive Tweaks
+   ========================================= */
+@media (max-width: 768px) {
+  .slick-slide {
+    padding: 0 4px;
+  }
+
+  .hero-banner h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-banner h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-banner p {
+    font-size: 0.875rem;
+  }
+}
